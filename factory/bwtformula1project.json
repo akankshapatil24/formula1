@@ -1,0 +1,9 @@
+{
+	"name": "bwtformula1project",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "becc38d6-233d-40dd-a345-8be36ca87692",
+		"tenantId": "5ac1280f-960f-4c07-ba09-eb478553d9fc"
+	}
+}
