@@ -1,0 +1,34 @@
+{
+	"name": "ds_adls_sink_race",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"directory_path": {
+				"type": "String"
+			},
+			"file_nm": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_nm",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().directory_path",
+					"type": "Expression"
+				},
+				"fileSystem": "formulaone"
+			}
+		},
+		"schema": {}
+	}
+}

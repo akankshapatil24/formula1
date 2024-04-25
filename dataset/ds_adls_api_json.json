@@ -1,0 +1,27 @@
+{
+	"name": "ds_adls_api_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_api",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"directory_path": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().directory_path",
+					"type": "Expression"
+				},
+				"fileSystem": "formulaone"
+			}
+		},
+		"schema": {}
+	}
+}
