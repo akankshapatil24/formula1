@@ -1,0 +1,64 @@
+{
+	"name": "ds_sink_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_api",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "copycsvparquet"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "eid",
+				"type": "UTF8"
+			},
+			{
+				"name": "ename",
+				"type": "UTF8"
+			},
+			{
+				"name": "LAST_NAME",
+				"type": "UTF8"
+			},
+			{
+				"name": "EMAIL",
+				"type": "UTF8"
+			},
+			{
+				"name": "PHONE_NUMBER",
+				"type": "UTF8"
+			},
+			{
+				"name": "HIRE_DATE",
+				"type": "UTF8"
+			},
+			{
+				"name": "JOB_ID",
+				"type": "UTF8"
+			},
+			{
+				"name": "SALARY",
+				"type": "UTF8"
+			},
+			{
+				"name": "COMMISSION_PCT",
+				"type": "UTF8"
+			},
+			{
+				"name": "MANAGER_ID",
+				"type": "UTF8"
+			},
+			{
+				"name": "DEPARTMENT_ID",
+				"type": "UTF8"
+			}
+		]
+	}
+}
